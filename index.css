@@ -1,0 +1,129 @@
+/* TEXT STYLING */
+* {
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.cr-header {
+    font-size: 2.75em;
+}
+
+/* HERO VIDEO */
+.hero {
+    margin: 0 0 100px;
+}
+
+.hero video {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ABOUT US TEXT */
+.top-text {
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.top-text p {
+    font-size: 1.2em;
+    line-height: 1.75em;
+}
+
+/* IMAGE BUBBLES */
+.img-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0 30px;
+}
+
+.img-row img {
+    -webkit-transform: scale(0.8); /* Saf3.1+, Chrome */
+    -moz-transform: scale(0.8); /* FF3.5+ */
+    -ms-transform: scale(0.8); /* IE9 */
+    -o-transform: scale(0.8); /* Opera 10.5+ */
+    transform: scale(0.8); /* IE6–IE9 */
+}
+
+/* LINE STYLING */
+.divider img {
+    display: block;
+    margin: 0 auto;
+    width: 55%;
+}
+
+/* MISSION STATEMENT */
+.mission-statement {
+    display: block;
+    text-align: center;
+    margin: 100px auto;
+}
+
+.mission-statement span {
+    font-size: 1.25em;
+}
+
+/* LOCATIONS */
+.locations h2 {
+    text-align: center;
+    margin: 100px 0 70px;
+}
+
+.locations>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7%;
+}
+
+.locations ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+    display: none;
+}
+
+.locations li {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+.showStoresBtn {
+    border: 0px;
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1080px) {
+    .hero video {
+        width: 85%;
+    }
+
+    .top-text {
+        width: 75%;
+    }
+
+    .divider img {
+        width: 75%;
+    }
+  }
+
+
+@media only screen and (max-width: 900px) {
+    .locations>div {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+
+    .locations img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* .storeList {
+        display: none;
+    } */
+}
