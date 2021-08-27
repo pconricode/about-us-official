@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <title>About Us</title>
 </head>
+
 <body>
 
     <div class="hero">
@@ -15,8 +17,12 @@
 
     <div class="top-text">
         <h2 class="cr-header">ABOUT US</h2>
-        <p>C-A-L Ranch is a "...Ranch an Home Store. AND SO MUCH MORE." But we will let you in on a secret - while we have all the feed and seed you'd ever need, the AND SO MUCH MORE part is where we thrive.</p>
-        <p>Our company is full of craftsmen, marksmen, outdoor grill masters, backyard farmers, and people who just love to hunt and fish. We are campers, hikers, dreamers, doers, and makers. We like to turn up the flavor and get in the game. We feed our chickens, love our pets, DIY, and dress to the nines for concerts, rodeos, and Sundays.</p>
+        <p>C-A-L Ranch is a "...Ranch an Home Store. AND SO MUCH MORE." But we will let you in on a secret - while we
+            have all the feed and seed you'd ever need, the AND SO MUCH MORE part is where we thrive.</p>
+        <p>Our company is full of craftsmen, marksmen, outdoor grill masters, backyard farmers, and people who just love
+            to hunt and fish. We are campers, hikers, dreamers, doers, and makers. We like to turn up the flavor and get
+            in the game. We feed our chickens, love our pets, DIY, and dress to the nines for concerts, rodeos, and
+            Sundays.</p>
     </div>
 
     <div class="img-row">
@@ -42,19 +48,20 @@
     <div class="locations">
         <h2 class="cr-header">LOCATIONS</h2>
         <div>
-            <div class="idaho">
+            <div id="idaho" onclick="classToggle('idaho')">
                 <img src="images/idaho_alt.png" alt="">
-                <ul>
+                <ul id="id_storeList" class="storeList">
                     <li>Blackfoot, ID</li>
                     <li>Burley, ID</li>
                     <li>Idaho Falls, ID</li>
                     <li>Pocatello, ID</li>
                     <li>Rexburg, ID</li>
                 </ul>
+                <!-- <button class="showStoresBtn">See Stores</button> -->
             </div>
-            <div class="utah">
+            <div id="utah" onclick="classToggle('utah')">
                 <img src="images/utah_alt.png" alt="">
-                <ul>
+                <ul id="ut_storeList" class="storeList">
                     <li>American Fork, UT</li>
                     <li>Bountiful, UT</li>
                     <li>Cedar City, UT</li>
@@ -67,29 +74,31 @@
                     <li>Vernal, UT</li>
                     <li>West Jordan, UT</li>
                 </ul>
+                <!-- <button class="showStoresBtn">See Stores</button> -->
             </div>
-            <div class="nevada">
+            <div id="nevada" onclick="classToggle('nevada')">
                 <img src="images/nevada_alt.png" alt="">
-                <ul>
+                <ul id="nv_storeList" class="storeList">
                     <li>Carson City, NV</li>
                     <li>Elko, NV</li>
                     <li>Ely, NV</li>
                     <li>Las Vegas, NV</li>
                 </ul>
+                <!-- <button class="showStoresBtn">See Stores</button> -->
             </div>
-            <div class="arizona">
+            <div id="arizona" onclick="classToggle('arizona')">
                 <img src="images/arizona_alt.png" alt="">
-                <ul style="display:none;" class="storeList" id="arizonaStores">
+                <ul id="az_storeList" class="storeList show">
                     <li>Casa Grande, AZ</li>
                     <li>Flagstaff, AZ</li>
                     <li>Goodyear, AZ</li>
                     <li>Kingman, AZ</li>
                     <li>Prescott, AZ</li>
-                    <li>Show Low, AZ</li>                    
-                    <li>Sierra Vista, AZ</li>                    
+                    <li>Show Low, AZ</li>
+                    <li>Sierra Vista, AZ</li>
                     <li>Yuma, AZ</li>
                 </ul>
-                <button id="showStoresBtn" class="showStoresBtn" onclick="showStores()">See Stores</button>
+                <!-- <button class="showStoresBtn">See Stores</button> -->
             </div>
         </div>
     </div>
@@ -100,29 +109,49 @@
 
 
     <script>
+        function classToggle(state) {
+            // var list = document.getElementsByClassName("storeList");
+            // var classes = list.classList;
+            // alert(classes);
 
-function toggleClass( element ) {
-    var classe = 'square bg-red';
-
-    if ( element.className == classe ){
-        element.className = classe.replace('bg-red', 'active');
-    } else {
-        element.className = classe;
-    }
-}
+            // const mediaQuery = window.matchMedia('(max-width: 768px)');
+            // id_storeList.style.display = 'none';
+            // ut_storeList.style.display = 'none';
+            // nv_storeList.style.display = 'none';
+            // az_storeList.style.display = 'none';
 
 
-        // function showStores() {
-        //   var x = document.getElementById("arizonaStores");
-        //   var y = document.getElementById("showStoresBtn");
-        //   if (x.style.display === "none") {
-        //     x.style.display = "block";
-        //     y.innerHTML = "Hide Stores";
-        //   } else {
-        //     x.style.display = "none";
-        //     y.innerHTML = "See Stores";
-        //   }
-        // }
-        </script>
+            // if (mediaQuery.matches) {
+            //     if (state == "idaho") {
+            //         id_storeList.style.display = 'block';
+            //     } else if (state == "utah") {
+            //         ut_storeList.style.display = 'block';
+            //     } else if (state == "nevada") {
+            //         nv_storeList.style.display = 'block';
+            //     } else if (state == "arizona") {
+            //         az_storeList.style.display = 'block';
+            //     }
+
+            //     if (state == "idaho") {
+            //         id_storeList.style.display = 'block';
+            //     } else if (state == "utah") {
+            //         ut_storeList.style.display = 'block';
+            //     } else if (state == "nevada") {
+            //         nv_storeList.style.display = 'block';
+            //     } else if (state == "arizona") {
+            //         az_storeList.style.display = 'block';
+            //     }
+            // }
+
+
+
+            // if (classes == 'show') {
+            //     classes = list.replace('show', 'hide');
+            // } else {
+            //     classes = 'show';
+            // }
+        }
+    </script>
 </body>
+
 </html>

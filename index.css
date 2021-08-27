@@ -77,12 +77,16 @@
     gap: 7%;
 }
 
+.locations>div>div {
+    text-align: center;
+}
+
 .locations ul {
     list-style-type: none;
     text-align: center;
     padding: 0px;
     margin-top: 0px;
-    display: none;
+    /* display: none; */
 }
 
 .locations li {
@@ -93,9 +97,18 @@
 .showStoresBtn {
     border: 0px;
     background-color: white;
-    display: block;
+    display: none;
     margin: 0 auto;
 }
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
 
 @media only screen and (max-width: 1080px) {
     .hero video {
@@ -109,18 +122,31 @@
     .divider img {
         width: 75%;
     }
+
+    .img-row img {
+        width: 25%;
+    }
   }
 
 
 @media only screen and (max-width: 900px) {
     .locations>div {
         flex-direction: column;
+        row-gap: 25px;
         /* flex-wrap: wrap; */
     }
 
     .locations img {
         display: block;
         margin: 0 auto;
+    }
+
+    /* .locations ul {
+        display: none;
+    } */
+
+    .showStoresBtn {
+        display: block;
     }
 
     /* .storeList {
